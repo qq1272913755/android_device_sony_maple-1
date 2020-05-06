@@ -12,15 +12,27 @@ TARGET_SCREEN_WIDTH := 1080
 # vendor/lineage/config/common.mk
 TARGET_BOOTANIMATION_HALF_RES := true
 
-### Carbon
-$(call inherit-product, vendor/carbon/config/gsm.mk)
-$(call inherit-product, vendor/carbon/config/common.mk)
+### lineage
+#$(call inherit-product, vendor/lineage/config/gsm.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# VoLTE
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.is_voip_enabled=1 \
+    persist.vendor.radio.rat_on=combine \
+    persist.vendor.radio.voice_on_lte=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1  \
+    persist.dbg.wfc_avail_ovr=1
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := carbon_maple
+PRODUCT_NAME := lineage_maple
 PRODUCT_DEVICE := maple
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=maple
+    PRODUCT_NAME=maple \
