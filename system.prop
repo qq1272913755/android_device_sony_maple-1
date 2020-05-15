@@ -25,3 +25,6 @@ ro.semc.version.fs=GENERIC
 ro.semc.version.fs_revision=47.2.A.11.228
 ro.semc.product.name=Xperia XZ Premium
 ro.semc.product.device=G81
+
+# Enabling Assistant
+ro.opa.eligible_device=true
