@@ -38,7 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.renderer=skiavk
 
-include device/sony/lilac/prebuilts/prebuilts.mk
+include device/sony/maple/prebuilts/prebuilts.mk
 
 # IMS
 PRODUCT_PACKAGES += \
