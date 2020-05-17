@@ -31,11 +31,16 @@ PRODUCT_COPY_FILES += \
 
 # Permissions for Sony
 PRODUCT_COPY_FILES += \
+	$(PRE_PATH)/permissions/com.sonymobile.album.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.album.xml \
+	$(PRE_PATH)/permissions/com.sonymobile.album.internal.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.album.internal.xml \
 	$(PRE_PATH)/permissions/com.sony.device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.sony.device.xml
 
 # Framework jars
 PRODUCT_COPY_FILES += \
-	$(PRE_PATH)/framework/com.sony.device.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sony.device.jar
+	$(PRE_PATH)/framework/com.sonymobile.album.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sonymobile.album.jar \
+	$(PRE_PATH)/framework/com.sonymobile.album.internal.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sonymobile.album.internal.jar \
+	$(PRE_PATH)/framework/com.sony.device.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sony.device.jar \
+	$(PRE_PATH)/framework/com.sonyericsson.music.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.sonyericsson.music.jar
 
 PRODUCT_PACKAGES += \
 	HotwordEnrollmentOKGoogleHEXAGON \
