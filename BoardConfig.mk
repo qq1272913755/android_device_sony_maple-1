@@ -51,9 +51,6 @@ TARGET_PROVIDES_LIBLIGHT := true
 ### MODEM
 BOARD_MODEM_CUSTOMIZATIONS := true
 
-### VNDK
-BOARD_VNDK_VERSION := current
-
 ### IMS
 BOARD_IMS_CAMERA := true
 
@@ -63,3 +60,4 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
+

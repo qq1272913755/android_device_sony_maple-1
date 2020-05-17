@@ -28,3 +28,6 @@ endif # WITH_TWRP
 
 # Customization
 $(call inherit-product, device/sony/maple/customization.mk)
+
+# Disable treble
+PRODUCT_FULL_TREBLE_OVERRIDE := false
