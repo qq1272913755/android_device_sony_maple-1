@@ -23,6 +23,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=2 \
     dalvik.vm.image-dex2oat-threads=4
 
+# USB debugging at boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1
+
 # VoLTE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.is_voip_enabled=1 \
