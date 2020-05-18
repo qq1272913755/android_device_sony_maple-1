@@ -50,7 +50,9 @@ include device/sony/maple/prebuilts/prebuilts.mk
 # IMS
 PRODUCT_PACKAGES += \
 	ims-ext-common_system \
-	ims-ext-common
+	ims-ext-common \
+	qti-telephony-utils \
+	qti_telephony_utils.xml
 
 # External exFat tools
 PRODUCT_PACKAGES += \
