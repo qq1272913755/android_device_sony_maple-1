@@ -27,11 +27,16 @@ SOONG_CONFIG_SONY_YOSHINO_INIT := EXTENSION
 SOONG_CONFIG_SONY_YOSHINO_INIT_EXTENSION := libinit.maple
 TARGET_UNIFIED_DEVICE := true
 
+### KERNEL
+ifeq ($(IS_MAPLE_DSDS),true)
+TARGET_KERNEL_CONFIG := lineage-msm8998-yoshino-maple_dsds_defconfig
+### BOOTLOADER
+TARGET_BOOTLOADER_BOARD_NAME := G8142
+else
+TARGET_KERNEL_CONFIG := lineage-msm8998-yoshino-maple_defconfig
 ### BOOTLOADER
 TARGET_BOOTLOADER_BOARD_NAME := G8141
-
-### KERNEL
-TARGET_KERNEL_CONFIG := lineage-msm8998-yoshino-maple_defconfig
+endif
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=maple
 
@@ -60,4 +65,3 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
-
